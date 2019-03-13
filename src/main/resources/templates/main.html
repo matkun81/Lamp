@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Apartment</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<form th:action="@{/}" enctype="multipart/form-data" class="form-horizontal" method="post">
+    <button type="submit">Добавить комнату</button>
+</form>
+
+<div th:each="room : ${roomList}">
+    <strong>
+        <a href="#" class="dark-grey-text"><strong th:text="${room.id}"></strong></a>
+    </strong>
+    <a th:href="@{/{roomId}/edit(roomId =${room.id})}"> Зайти в комнату</a>
+</div>
+
+</main>
+</body>
+</html>

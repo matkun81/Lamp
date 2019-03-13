@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Room</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<p th:text="${text} + '!'"/>
+<form th:action="@{/{roomId}/edit(roomId = ${room.id})}" class="form-horizontal" method="post">
+    <button type="submit">switch</button>
+</form>
+</body>
+</html>
